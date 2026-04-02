@@ -1,0 +1,26 @@
+# ============================================================
+# requirements.txt — Dependencias del backend (starter)
+# Instalar con: pip install -r requirements.txt
+# ============================================================
+
+# Framework web
+fastapi>=0.115.6
+uvicorn[standard]>=0.34.0
+
+# Base de datos PostgreSQL
+sqlalchemy>=2.0.36
+psycopg2-binary>=2.9.10
+
+# Autenticacion JWT
+python-jose[cryptography]>=3.3.0
+bcrypt>=4.0.0
+
+# Variables de entorno
+python-dotenv>=1.0.1
+
+# Validación de datos
+pydantic[email]>=2.11.0
+pydantic-settings>=2.7.0
+
+# Manejo de formularios y archivos
+python-multipart>=0.0.20

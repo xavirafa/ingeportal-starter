@@ -1,0 +1,57 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+env/
+
+# Variables de entorno — NUNCA commitear
+.env
+.env.local
+.env.production
+backend/.env
+
+# Node / Frontend
+node_modules/
+frontend/dist/
+frontend/.vite/
+.npm/
+
+# Logs
+backend/logs/*.log
+frontend/logs/*.log
+*.log
+
+# Nginx binarios (solo se commitea la config, no el ejecutable)
+nginx/nginx.exe
+nginx/logs/
+nginx/temp/
+nginx/conf/nginx.pid
+
+# Archivos temporales / OS
+.DS_Store
+Thumbs.db
+desktop.ini
+*.tmp
+*.temp
+
+# Archivos de datos que no deben ir al repo
+*.xlsx
+*.pdf
+*.dump
+*.bak
+
+# IDE
+.vscode/settings.json
+.idea/
+*.suo
+*.user
+
+# Claude Code local
+.claude/settings.local.json

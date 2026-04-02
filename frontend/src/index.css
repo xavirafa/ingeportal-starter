@@ -1,0 +1,136 @@
+/* index.css — Estilos globales del portal */
+
+/* Importar Tailwind CSS v4 */
+@import "tailwindcss";
+
+/* ─── Variables de tema (claro por defecto) ─── */
+:root {
+  /* Fondos */
+  --bg-primary: #f8fafc;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #f1f5f9;
+  --bg-card: #ffffff;
+  --bg-hover: #f1f5f9;
+  --bg-input: #f9fafb;
+
+  /* Sidebar — gris-azul medio */
+  --sidebar-bg: #334155;
+  --sidebar-text: #cbd5e1;
+  --sidebar-text-active: #a5b4fc;
+  --sidebar-accent: rgba(99,102,241,0.2);
+
+  /* Textos */
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #94a3b8;
+  --text-faint: #cbd5e1;
+
+  /* Bordes */
+  --border-primary: #e2e8f0;
+  --border-light: #f1f5f9;
+
+  /* Acento de marca */
+  --accent: #00b4d8;
+  --accent-light: #e0f7fa;
+  --accent-indigo: #6366f1;
+  --accent-indigo-light: #eef2ff;
+  --accent-green: #10b981;
+
+  /* Estados */
+  --success: #16a34a;
+  --success-bg: #f0fdf4;
+  --success-border: #bbf7d0;
+  --danger: #dc2626;
+  --danger-bg: #fef2f2;
+  --danger-border: #fecaca;
+  --warning-bg: #fffbeb;
+  --warning-border: #fde68a;
+  --warning-text: #92400e;
+
+  /* Sombras */
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.04);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.08);
+  --shadow-lg: 0 20px 60px rgba(0,0,0,0.12);
+
+  /* Tablas */
+  --table-header-bg: #f8fafc;
+  --table-alt-row: #fafafa;
+}
+
+/* ─── Tema oscuro ─── */
+[data-theme="dark"] {
+  /* Fondos */
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --bg-tertiary: #162032;
+  --bg-card: #1e293b;
+  --bg-hover: #263449;
+  --bg-input: #1e293b;
+
+  /* Sidebar (oscuro clásico en tema dark) */
+  --sidebar-bg: #0f172a;
+  --sidebar-text: #94a3b8;
+  --sidebar-text-active: #a5b4fc;
+  --sidebar-accent: rgba(99,102,241,0.2);
+
+  /* Textos */
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --text-faint: #475569;
+
+  /* Bordes */
+  --border-primary: #2d3a4f;
+  --border-light: #1e293b;
+
+  /* Acento */
+  --accent-light: rgba(0,180,216,0.15);
+  --accent-indigo-light: rgba(99,102,241,0.15);
+
+  /* Estados */
+  --success-bg: rgba(22,163,74,0.12);
+  --success-border: rgba(22,163,74,0.25);
+  --danger-bg: rgba(220,38,38,0.12);
+  --danger-border: rgba(220,38,38,0.25);
+  --warning-bg: rgba(245,158,11,0.1);
+  --warning-border: rgba(245,158,11,0.2);
+  --warning-text: #fbbf24;
+
+  /* Sombras */
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.2);
+  --shadow-md: 0 4px 16px rgba(0,0,0,0.3);
+  --shadow-lg: 0 20px 60px rgba(0,0,0,0.5);
+
+  /* Tablas */
+  --table-header-bg: #162032;
+  --table-alt-row: #1a2538;
+}
+
+/* ─── Estilos base ─── */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Transicion suave al cambiar de tema */
+[data-theme] * {
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+}
+
+/* Animacion de pulso para badges de alerta */
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.75; transform: scale(1.15); }
+}
